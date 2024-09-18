@@ -1,5 +1,9 @@
-import Image from "next/image";
+import Button from "@mui/material/Button";
 
 export default function Home() {
-  return <h1>DEVLANE</h1>;
+  return (
+    <div>
+      <h1>DevLane</h1>
+    </div>
+  );
 }

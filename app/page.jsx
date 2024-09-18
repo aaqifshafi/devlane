@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import Hero from "@/app/components/Hero";
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -34,7 +35,7 @@ const Page = () => {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className="relative w-full h-full"
+      className="relative w-full h-screen overflow-y-auto scrollbar-hide"
     >
       <motion.div
         variants={overlayVariants}
@@ -46,9 +47,7 @@ const Page = () => {
         className="relative z-20 w-full h-full"
       >
         <Header />
-
         <Hero />
-
         <Footer />
       </motion.div>
     </motion.div>

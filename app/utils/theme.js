@@ -20,7 +20,8 @@ const theme = createTheme({
         MuiAppBar: {
             styleOverrides: {
                 root: {
-                    boxShadow: 'none'
+                    boxShadow: 'none',
+                    position: 'fixed',
                 },
             },
         },

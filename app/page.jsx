@@ -1,9 +1,8 @@
-import Button from "@mui/material/Button";
-
-export default function Home() {
+function page() {
   return (
-    <div>
-      <h1>DevLane</h1>
-    </div>
+    <main>
+      <h1>Hello from Devlane</h1>
+    </main>
   );
 }
+export default page;

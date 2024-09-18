@@ -1,6 +1,8 @@
-// import "./globals.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import "./globals.css";
+import theme from "@/app/utils/theme.js";
+import { ThemeProvider } from "@mui/material/styles";
+import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
 
 export const metadata = {
   title: "Devlane",
@@ -10,11 +12,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <Header />
-        {children}
-        <Footer />
-      </body>
+      <ThemeProvider theme={theme}>
+        <body>
+          <Header />
+          {children}
+          <Footer />
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

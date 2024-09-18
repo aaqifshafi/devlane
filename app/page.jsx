@@ -1,7 +1,9 @@
+import Hero from "./components/Hero";
+
 function page() {
   return (
     <main>
-      <h1>Hello from Devlane</h1>
+      <Hero />
     </main>
   );
 }

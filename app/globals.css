@@ -5,14 +5,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --transition: #dcedff;
 }
 
-/* @media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #ffffff;
     --foreground: #171717;
+    --transition: #dcedff;
   }
-} */
+}
 
 body {
   color: var(--foreground);

@@ -11,10 +11,11 @@ const theme = createTheme({
         },
         secondary: {
             light: '#ff7961',
-            main: '#f44336',
+            main: '#dcedff',
             dark: '#ba000d',
             contrastText: '#000',
         },
+
     },
     components: {
         MuiAppBar: {

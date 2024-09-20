@@ -27,3 +27,12 @@ body {
     text-wrap: balance;
   }
 }
+.wrapper{
+  text-align:center;
+}
+
+svg{
+  margin: 0 auto;
+  width:63%;
+  height:auto;
+}

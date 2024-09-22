@@ -28,7 +28,7 @@ const Main = () => {
         ref={containerRef}
         initial="hidden"
         animate="visible"
-        style={{ scrollBehavior: "smooth" }}
+        style={{ scrollSnapAlign: "start", scrollBehavior: "smooth" }}
         className="flex-grow relative h-[200vh]"
       >
         {/* Background layers */}
@@ -38,35 +38,31 @@ const Main = () => {
           className="absolute inset-0 z-10 bg-transition"
         />
 
-      {/* Content layer */}
-      <motion.div
-        variants={contentVariants}
-        className="absolute inset-0 z-20 bg-background"
-      >
-        {/* Header Section */}
-        <motion.div variants={childVariants}>
-          <Header />
-        </motion.div>
-
-        {/* Container for Hero and Who We Are, occupying the same space */}
-        <div className="sticky top-0 w-full h-screen flex items-center justify-center">
-          <motion.div
-            style={{ opacity: heroOpacity }}
-            className="absolute w-full h-full"
-          >
-            <Hero />
+        {/* Content layer */}
+        <motion.div
+          variants={contentVariants}
+          className="absolute inset-0 z-20 bg-background"
+        >
+          {/* Header Section */}
+          <motion.div variants={childVariants}>
+            <Header />
           </motion.div>
-          <motion.div
-            style={{ opacity: whoWeAreOpacity }}
-            className="absolute w-full h-full"
-          >
-            <WhoWeAre />
-          </motion.div>
-        </div>
-
-        {/* Footer Section */}
-        <motion.div variants={childVariants} className="mt-screen">
-          <Footer />
+          {/* Container for Hero and Who We Are, occupying the same space */}
+          <div className="sticky top-0 w-full h-screen flex items-center justify-center">
+            <Blob />
+            <motion.div
+              style={{ opacity: heroOpacity }}
+              className="absolute w-full h-full"
+            >
+              <Hero />
+            </motion.div>
+            <motion.div
+              style={{ opacity: whoWeAreOpacity }}
+              className="absolute w-full h-full"
+            >
+              <WhoWeAre />
+            </motion.div>
+          </div>
         </motion.div>
       </motion.div>
 

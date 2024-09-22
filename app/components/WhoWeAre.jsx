@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 function WhoWeAre() {
   return (
-    <div className="h-screen flex flex-col justify-center items-center">
+    <div className="h-auto flex flex-col justify-center items-center mt-96">
       <Typography className="font-semibold text-center text-4xl mb-32">
         Who We Are ?
       </Typography>

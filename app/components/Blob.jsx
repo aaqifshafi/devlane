@@ -2,11 +2,11 @@ import React from 'react'
 
 function Blob() {
   return (
-    <div>
+    <div className=''>
         {/* Animated SVG Background */}
       <div className="absolute inset-0 z-0 opacity-60">
         <svg
-          className="w-full h-full object-cover h-[800px]"
+          className="w-full h-full object-cover"
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"

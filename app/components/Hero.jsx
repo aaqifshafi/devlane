@@ -4,7 +4,7 @@ import Blob from "./Blob";
 function Hero() {
   return (
     <div className="relative h-screen flex flex-col justify-center items-center">
-      <Blob />
+      {/* <Blob /> */}
       {/* Content */}
       <div className="z-10 text-center">
         <span className="text-white font-semi-bold text-4xl transition-transform transform hover:scale-105">

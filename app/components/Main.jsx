@@ -23,19 +23,20 @@ const Main = () => {
   const whoWeAreOpacity = useTransform(scrollYProgress, [0.5, 1], [0, 1]);
 
   return (
-    <motion.div
-      ref={containerRef}
-      initial="hidden"
-      animate="visible"
-      style={{ scrollBehavior: "smooth" }}
-      className="relative w-full h-[200vh] overflow-y-auto scrollbar-hide"
-    >
-      {/* Background layers */}
-      <div className="absolute inset-0 bg-background" />
+    <div className="relative w-full min-h-screen flex flex-col">
       <motion.div
-        variants={circularRevealVariants}
-        className="absolute inset-0 z-10 bg-transition"
-      />
+        ref={containerRef}
+        initial="hidden"
+        animate="visible"
+        style={{ scrollBehavior: "smooth" }}
+        className="flex-grow relative h-[200vh]"
+      >
+        {/* Background layers */}
+        <div className="absolute inset-0 bg-background" />
+        <motion.div
+          variants={circularRevealVariants}
+          className="absolute inset-0 z-10 bg-transition"
+        />
 
       {/* Content layer */}
       <motion.div
@@ -47,14 +48,12 @@ const Main = () => {
           <Header />
         </motion.div>
 
-
         {/* Container for Hero and Who We Are, occupying the same space */}
         <div className="sticky top-0 w-full h-screen flex items-center justify-center">
           <motion.div
             style={{ opacity: heroOpacity }}
             className="absolute w-full h-full"
           >
-            <Blob />
             <Hero />
           </motion.div>
           <motion.div
@@ -66,11 +65,16 @@ const Main = () => {
         </div>
 
         {/* Footer Section */}
-        <motion.div variants={childVariants} className="">
+        <motion.div variants={childVariants} className="mt-screen">
           <Footer />
         </motion.div>
       </motion.div>
-    </motion.div>
+
+      {/* Footer Section */}
+      <motion.div variants={childVariants}>
+        <Footer />
+      </motion.div>
+    </div>
   );
 };
 

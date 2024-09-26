@@ -1,5 +1,5 @@
 import { Typography, Button } from "@mui/material";
-import { motion } from "framer-motion";
+import RippleEffect from "./animations/RippleEffect";
 
 function WhoWeAre() {
   return (
@@ -11,14 +11,12 @@ function WhoWeAre() {
         We are a passionate team dedicated to crafting innovative solutions that
         empower businesses and enhance user experiences.
       </Typography>
-      <Button
-        variant="outlined"
-        size="large"
-        sx={{ borderRadius: "20px" }}
-        color="info"
-      >
-        Learn More
-      </Button>
+
+      <RippleEffect className="inline-block rounded-full bg-background font-semibold">
+        <button class="rounded-lg text-sm py-4 px-8 hover:text-white">
+          Learn more
+        </button>
+      </RippleEffect>
     </div>
   );
 }

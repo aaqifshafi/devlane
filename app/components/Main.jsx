@@ -6,6 +6,7 @@ import Footer from "@/app/components/Footer";
 import Hero from "@/app/components/Hero";
 import WhoWeAre from "@/app/components/WhoWeAre";
 import Blob from "./Blob";
+import Contact from "./Contact";
 import {
   circularRevealVariants,
   contentVariants,
@@ -65,6 +66,8 @@ const Main = () => {
           </div>
         </motion.div>
       </motion.div>
+
+      <Contact />
 
       {/* Footer Section */}
       <motion.div variants={childVariants}>

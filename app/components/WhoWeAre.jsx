@@ -4,10 +4,10 @@ import RippleEffect from "./animations/RippleEffect";
 function WhoWeAre() {
   return (
     <div className="h-screen flex flex-col justify-center items-center">
-      <Typography className="antialiased font-bold text-center text-4xl mb-32">
+      <Typography className="antialiased font-bold text-center text-4xl mb-20">
         Who We Are?
       </Typography>
-      <Typography className="antialiased text-center font-semi-bold text-lg max-w-xl mb-6 text-white">
+      <Typography className="antialiased text-center font-semi-bold text-lg text-cyan-50 max-w-xl mb-6 text-white">
         We are a passionate team dedicated to crafting innovative solutions that
         empower businesses and enhance user experiences.
       </Typography>

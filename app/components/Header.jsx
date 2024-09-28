@@ -15,7 +15,7 @@ import logo from "../public/logo.png";
 export default function Header() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar color="transparent" position="static">
+      <AppBar className="z-50" color="transparent" position="static">
         <Toolbar>
           <div className="flex-grow">
             <Link href={"/"}>

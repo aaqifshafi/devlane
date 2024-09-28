@@ -28,7 +28,7 @@ export default function Header() {
               />
             </Link>
           </div>
-          <div className="">
+          <div className="antialiased">
             <Link href="/services">
               <Button color="inherit">Services</Button>
             </Link>

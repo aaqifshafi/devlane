@@ -19,7 +19,7 @@ function Blob() {
             y1="70.711%"
             y2="0%"
           >
-            <stop offset="0%" stopColor="rgb(220,54,152)" stopOpacity="1" />
+            <stop offset="0%" stopColor="rgb(100,149,237)" stopOpacity="1" />
             <stop offset="100%" stopColor="rgb(50,109,138)" stopOpacity="1" />
           </linearGradient>
           <path fill="url(#PSgrad_0)">
@@ -57,7 +57,7 @@ function Blob() {
             y1="70.711%"
             y2="0%"
           >
-            <stop offset="0%" stopColor="rgb(95,54,152)" stopOpacity="1" />
+            <stop offset="0%" stopColor="rgb(120,54,152)" stopOpacity="1" />
             <stop offset="100%" stopColor="rgb(247,109,138)" stopOpacity="1" />
           </linearGradient>
           <path fill="url(#PSgrad_0)">

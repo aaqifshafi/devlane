@@ -12,7 +12,7 @@ function Contact() {
           className="cursor-pointer group"
           onClick={() => router.push("/contact")}
         >
-          <div className="relative text-black w-[22rem] h-[22rem] rounded-full bg-transition flex flex-col justify-center items-center transition-all duration-300 group-hover:bg-transparent group-hover:text-white">
+          <div className="antialiased relative text-black w-[22rem] h-[22rem] rounded-full bg-transition flex flex-col justify-center items-center transition-all duration-300 group-hover:bg-transparent group-hover:text-white hover:scale-125">
             <p className="text-sm text-center">Click to</p>
             <h1 className="text-3xl text-center font-semibold">Get in touch</h1>
           </div>

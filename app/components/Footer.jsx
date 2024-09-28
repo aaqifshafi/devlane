@@ -2,7 +2,7 @@ function Footer() {
   return (
     <div className="m-4">
       <div className="container mx-auto p-2 bg-white w-[600px] text-slate-700 flex justify-between">
-        <div className="flex flex-col gap-2">
+        <div className="antialiased flex flex-col gap-2">
           <h5 className="underline underline-offset-4">Info@devlane.com</h5>
           <p className="text-[8px] font-bold text-slate-500">Srinagar,J&K</p>
         </div>

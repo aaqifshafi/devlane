@@ -5,7 +5,10 @@ import { Typography } from '@mui/material'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Contact from '../components/Contact'
-import { circularRevealVariants, contentVariants, childVariants } from '../components/animations/framer'
+import { circularRevealVariants, contentVariants, childVariants } from '../components/animations/framer';
+import Image from 'next/image';
+import faarid from '../public/faarid.png'
+import aaqif from '../public/aaqif.png'
 
 export default function Page() {
   const containerRef = useRef(null);
@@ -44,7 +47,7 @@ export default function Page() {
             <Header />
           </motion.div>
 
-          {/* Container for Hero and Who We Are, occupying the same space */}
+          {/* Container for About and Team, occupying the same space */}
           <div className="sticky top-0 w-full h-screen flex items-center justify-center">
             <motion.div
               style={{ opacity: heroOpacity }}
@@ -68,13 +71,30 @@ export default function Page() {
                   Meet our Team
                 </Typography>
                 <div className='grid grid-cols-2 gap-20'>
+
                   <div className="antialiased font-bold text-center text-2xl mb-20">
-                    Aaqif Shafi
-                    <div className='text-xl font-thin p-2'>Full-Stack Developer</div>
+                    <Image 
+                    className='rounded-full mx-auto mb-6'
+                    src={aaqif}
+                    alt=""
+                    width={100}
+                    height={100}
+                    />
+                    <div className=''>
+                      Aaqif Shafi
+                    </div>
+                    <div className='text-xl font-thin p-2 antialiased'>Full-Stack Developer</div>
                   </div>
                   <div className="antialiased font-bold text-center text-2xl mb-20">
-                    Faarid Zargar
-                    <div className='text-xl font-thin p-2'>Full-Stack Developer</div>
+                    <Image 
+                    className='rounded-full mx-auto mb-6'
+                    src={faarid}
+                    alt=""
+                    width={100}
+                    height={100}
+                    />
+                    <div>Faarid Zargar</div>
+                    <div className='text-xl font-thin p-2 antialiased'>Full-Stack Developer</div>
                   </div>
                 </div>
               </motion.div>

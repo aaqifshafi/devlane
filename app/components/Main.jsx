@@ -17,11 +17,11 @@ const Main = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["center end", "center 90%"],
+    offset: ["start", "end start"],
   });
 
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const whoWeAreOpacity = useTransform(scrollYProgress, [0.5, 1], [0, 1]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+  const whoWeAreOpacity = useTransform(scrollYProgress, [0.3, 0.4], [0, 1]);
 
   return (
     <div className="relative w-full min-h-screen flex flex-col">
@@ -48,21 +48,23 @@ const Main = () => {
           <motion.div variants={childVariants}>
             <Header />
           </motion.div>
-          {/* Container for Hero and Who We Are, occupying the same space */}
-          <div className="sticky top-0 w-full h-screen flex items-center justify-center">
-            <Blob />
-            <motion.div
-              style={{ opacity: heroOpacity }}
-              className="absolute w-full h-full"
-            >
-              <Hero />
-            </motion.div>
-            <motion.div
-              style={{ opacity: whoWeAreOpacity }}
-              className="absolute w-full h-full"
-            >
-              <WhoWeAre />
-            </motion.div>
+          {/* Container for Hero and Who We Are */}
+          <div className="relative w-full" style={{ height: '200vh' }}>
+            <div className="sticky top-0 w-full h-screen flex items-center justify-center overflow-hidden">
+              <Blob />
+              <motion.div
+                style={{ opacity: heroOpacity }}
+                className="absolute w-full h-full"
+              >
+                <Hero />
+              </motion.div>
+              <motion.div
+                style={{ opacity: whoWeAreOpacity }}
+                className="absolute w-full h-full"
+              >
+                <WhoWeAre />
+              </motion.div>
+            </div>
           </div>
         </motion.div>
       </motion.div>

@@ -43,7 +43,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
-      <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
+      <nav className="mx-auto p-2 flex items-center justify-between">
         <Link href="/" className="flex-shrink-0">
           <Image
             src={logo}
@@ -63,14 +63,14 @@ export default function Header() {
           <Link href="/projects" className="text-gray-800 hover:text-gray-600">
             Projects
           </Link>
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="p-2 focus:outline-none"
+            aria-label="Toggle menu"
+          >
+            <MenuIcon isOpen={isMenuOpen} />
+          </button>
         </div>
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="p-2 focus:outline-none"
-          aria-label="Toggle menu"
-        >
-          <MenuIcon isOpen={isMenuOpen} />
-        </button>
       </nav>
       <Menu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </header>

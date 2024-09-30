@@ -1,55 +1,78 @@
-// app/components/Header.js
-"use client"; // This should be a client component
-import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
+"use client";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import Menu from "./Menu";
 import logo from "../public/logo.png";
 
+const MenuIcon = ({ isOpen }) => (
+  <motion.svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <motion.path
+      stroke="#000000"
+      strokeWidth="2"
+      strokeLinecap="round"
+      d="M 2 5.5 L 22 5.5"
+      animate={isOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
+    />
+    <motion.path
+      stroke="#000000"
+      strokeWidth="2"
+      strokeLinecap="round"
+      d="M 2 12 L 22 12"
+      animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
+    />
+    <motion.path
+      stroke="#000000"
+      strokeWidth="2"
+      strokeLinecap="round"
+      d="M 2 18.5 L 22 18.5"
+      animate={isOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
+    />
+  </motion.svg>
+);
+
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar className="z-50" color="transparent" position="static">
-        <Toolbar>
-          <div className="flex-grow">
-            <Link href={"/"}>
-              <Image
-                src={logo}
-                alt="Devlane"
-                width={150}
-                height={50}
-                className="object-contain"
-              />
-            </Link>
-          </div>
-          <div className="antialiased">
-            <Link href="/services">
-              <Button color="inherit">Services</Button>
-            </Link>
-            <Link href="/about">
-              <Button color="inherit">About</Button>
-            </Link>
-            <Link href="/projects">
-              <Button color="inherit">Projects</Button>
-            </Link>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
-          </div>
-        </Toolbar>
-      </AppBar>
-    </Box>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+      <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
+        <Link href="/" className="flex-shrink-0">
+          <Image
+            src={logo}
+            alt="Devlane"
+            width={150}
+            height={50}
+            className="object-contain"
+          />
+        </Link>
+        <div className="hidden md:flex space-x-4 antialiased">
+          <Link href="/services" className="text-gray-800 hover:text-gray-600">
+            Services
+          </Link>
+          <Link href="/about" className="text-gray-800 hover:text-gray-600">
+            About
+          </Link>
+          <Link href="/projects" className="text-gray-800 hover:text-gray-600">
+            Projects
+          </Link>
+        </div>
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="p-2 focus:outline-none"
+          aria-label="Toggle menu"
+        >
+          <MenuIcon isOpen={isMenuOpen} />
+        </button>
+      </nav>
+      <Menu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+    </header>
   );
 }

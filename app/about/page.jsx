@@ -20,7 +20,7 @@ export default function Page() {
   });
   
   const heroOpacity = useTransform(scrollYProgress, [0, 0.25], [1, 0]);
-  const whoWeAreOpacity = useTransform(scrollYProgress, [0.2, 0.35], [0, 1]);
+  const whoWeAreOpacity = useTransform(scrollYProgress, [0.2, 0.3], [0, 1]);
   const whoWeAreTextOpacity = useTransform(scrollYProgress, [0.3, 0.45], [1, 0]);
   const servicesOpacity = useTransform(scrollYProgress, [0.4, 0.55], [0, 1]);
   const servicesTextOpacity = useTransform(scrollYProgress, [0.55, 0.65], [1, 0]);

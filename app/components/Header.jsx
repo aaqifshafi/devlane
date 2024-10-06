@@ -53,19 +53,25 @@ export default function Header() {
             className="object-contain"
           />
         </Link>
-        <div className="hidden md:flex space-x-4 antialiased">
-          <Link href="/services" className="text-gray-800 hover:text-gray-600">
+        <div className="hidden md:flex space-x-8">
+          <Link
+            href="/services"
+            className="text-gray-800 hover:text-transition"
+          >
             Services
           </Link>
-          <Link href="/about" className="text-gray-800 hover:text-gray-600">
+          <Link href="/about" className="text-gray-800 hover:text-transition">
             About
           </Link>
-          <Link href="/projects" className="text-gray-800 hover:text-gray-600">
+          <Link
+            href="/projects"
+            className="text-gray-800 hover:text-transition"
+          >
             Projects
           </Link>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="p-2 focus:outline-none"
+            className="focus:outline-none"
             aria-label="Toggle menu"
           >
             <MenuIcon isOpen={isMenuOpen} />

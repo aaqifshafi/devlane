@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import Header from "./Header";
 
 const menuVariants = {
   hidden: { opacity: 0, scale: 0.95 },
@@ -30,7 +29,7 @@ const Menu = ({ isOpen, onClose }) => {
     >
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 text-gray-900 hover:text-gray-700"
+        className="absolute top-3 right-3 text-gray-900 hover:text-gray-700"
         aria-label="Close menu"
       >
         <CloseRoundedIcon size={24} />

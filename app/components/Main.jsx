@@ -49,7 +49,7 @@ const Main = () => {
             <Header />
           </motion.div>
           {/* Container for Hero and Who We Are */}
-          <div className="relative w-full" style={{ height: '200vh' }}>
+          <div className="relative w-full" style={{ height: "200vh" }}>
             <div className="sticky top-0 w-full h-screen flex items-center justify-center overflow-hidden">
               <Blob />
               <motion.div

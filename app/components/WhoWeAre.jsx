@@ -13,7 +13,7 @@ function WhoWeAre() {
       </Typography>
 
       <RippleEffect className="antialiased inline-block rounded-full bg-background font-semibold">
-        <button class="rounded-lg text-sm py-4 px-8 hover:text-white">
+        <button className="rounded-lg text-sm py-4 px-8 hover:text-white">
           Learn more
         </button>
       </RippleEffect>

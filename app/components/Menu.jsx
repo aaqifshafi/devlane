@@ -1,17 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
-import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 
 const menuVariants = {
-  hidden: { opacity: 0, scale: 0.95 },
+  hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    scale: 1,
     transition: { duration: 0.3, ease: "easeOut" },
   },
   exit: {
     opacity: 0,
-    scale: 0.95,
     transition: { duration: 0.2, ease: "easeIn" },
   },
 };
@@ -25,16 +22,9 @@ const Menu = ({ isOpen, onClose }) => {
       animate="visible"
       exit="exit"
       variants={menuVariants}
-      className="fixed inset-0 z-50 bg-background flex items-center justify-center"
+      className="fixed inset-0 z-40 bg-white flex items-center justify-center"
+      style={{ top: "40px" }} // Adjust this value based on your header height
     >
-      <button
-        onClick={onClose}
-        className="absolute top-3 right-3 text-gray-900 hover:text-gray-700"
-        aria-label="Close menu"
-      >
-        <CloseRoundedIcon size={24} />
-      </button>
-
       <div className="w-4/12">
         <div className="grid grid-cols-2 antialiased">
           <div>

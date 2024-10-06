@@ -128,8 +128,8 @@ export default function Page() {
                     <Typography>Custom websites tailored to your needs</Typography>
                   </div>
                   <div className="p-4">
-                    <Typography variant="h5" className="mb-2">Mobile Apps</Typography>
-                    <Typography>Cross-platform mobile applications</Typography>
+                    <Typography variant="h5" className="mb-2">Branding</Typography>
+                    <Typography>We give your business/brand a face and Identity by creating the most suitable logo and mockups of your projects and services.</Typography>
                   </div>
                   <div className="p-4">
                     <Typography variant="h5" className="mb-2">UI/UX Design</Typography>
@@ -149,20 +149,10 @@ export default function Page() {
                 className="h-screen flex flex-col justify-center items-center"
                 style={{ opacity: projectsTextOpacity }}
               >
-              <div className="h-screen flex flex-col justify-center items-center">
-                <Typography className="antialiased font-bold text-center text-5xl mb-12 tracking-tight">
-                  Our Projects
+              <div className="h-screen w-11/12 flex flex-col justify-center items-center">
+                <Typography className="antialiased font-semi-bold text-center text-4xl mb-12 tracking-tight">
+                Designing and building digital products is what we love to do, and we are awesome at it. We bet on success in every project we accept.
                 </Typography>
-                <div className="grid grid-cols-2 gap-8">
-                  <div className="p-4 text-center">
-                    <Typography variant="h5" className="mb-2">Project A</Typography>
-                    <Typography>E-commerce platform for a global retailer</Typography>
-                  </div>
-                  <div className="p-4 text-center">
-                    <Typography variant="h5" className="mb-2">Project B</Typography>
-                    <Typography>Social media app for creative professionals</Typography>
-                  </div>
-                </div>
               </div>
             </motion.div>
             </motion.div>
